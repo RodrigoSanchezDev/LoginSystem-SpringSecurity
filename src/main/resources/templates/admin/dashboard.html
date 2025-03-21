@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Panel de Administración</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body class="admin-panel">
+    <div class="glass-container">
+        <h1>Panel de Administración</h1>
+        <p>Bienvenido al panel de administración.</p>
+
+        <div class="button-container">
+            <button onclick="window.location.href='/admin/registrar_paciente'">REGISTRAR NUEVO PACIENTE</button>
+        </div>
+
+        <div class="logout">
+            <form th:action="@{/logout}" method="post">
+                <button type="submit">Cerrar sesión</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

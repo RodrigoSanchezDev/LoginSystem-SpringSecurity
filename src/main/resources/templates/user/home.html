@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Inicio Usuario</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+    <div class="glass-container">
+        <h1>Bienvenido a tu Panel de Usuario</h1>
+        <p>Aquí puedes administrar tus citas.</p>
+
+        <div class="button-container">
+            <button onclick="window.location.href='/user/programar_cita'">PROGRAMAR CITA</button>
+        </div>
+
+        <div class="logout">
+            <form th:action="@{/logout}" method="post">
+                <button type="submit">Cerrar sesión</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Iniciar Sesión</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+     <!-- 👇 Font Awesome (CDN) -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <!-- 📌 Contenedor Principal -->
+    <div class="main-container">
+        
+        <!-- 📌 Globo con usuarios de prueba -->
+        <div class="user-info">
+            <h2>Usuarios de prueba</h2>
+            <p><strong>Admin:</strong><br>usuario: admin | clave: admin123</p>
+            <p><strong>Cliente:</strong><br> usuario: cliente | clave: cliente123</p>
+            <p><strong>Invitado:</strong> <br>usuario: guest | clave: guest123</p>
+        </div>
+
+        <!-- 📌 Contenedor de login -->
+        <div class="login-container">
+            <div class="glass-container">
+                <h1>Iniciar Sesión</h1>
+
+                <form method="post" th:action="@{/login}">
+                    <div class="input-icon">
+                        <input type="text" name="username" placeholder="Usuario" required>
+                        <!-- Ícono de usuario -->
+                        <i class="fa-regular fa-user"></i>
+                    </div>
+
+                    <div class="input-icon">
+                        <input id="passwordField" type="password" name="password" placeholder="Contraseña" required>
+                        <!-- Ícono de ojo para mostrar/ocultar -->
+                        <i class="fa-regular fa-eye" onclick="togglePassword()"></i>
+                    </div>
+
+                    <div class="remember-me">
+                        <label>
+                            <input type="checkbox" name="remember-me">
+                            <strong>Recordarme</strong>
+                        </label>
+                        <a href="#">¿Olvidaste tu contraseña?</a>
+                    </div>
+
+                    <button type="submit">INGRESAR</button>
+
+                    <p class="register-text">
+                        ¿No tienes cuenta? <a href="#">Regístrate</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script para mostrar/ocultar contraseña -->
+    <script>
+      function togglePassword() {
+        const passField = document.getElementById("passwordField");
+        if (passField.type === "password") {
+          passField.type = "text";
+        } else {
+          passField.type = "password";
+        }
+      }
+    </script>
+</body>
+</html>

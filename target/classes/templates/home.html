@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+
+    <style>
+        /* 📌 Estilo para el icono de login */
+        .login-icon {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 32px;
+            height: 32px;
+            cursor: pointer;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .login-icon:hover {
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 📌 Icono de login en la esquina superior derecha -->
+    <a href="/login">
+        <svg class="login-icon" fill="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 12c2.67 0 8 1.34 8 4v2h-16v-2c0-2.66 5.33-4 8-4zm0-2c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm0-10c-5.52 0-10 4.48-10 10s4.48 10 10 10 10-4.48 10-10-4.48-10-10-10z"></path>
+        </svg>
+    </a>
+
+    <h1 th:text="|Bienvenido a ${name}!|"></h1>
+
+    <div sec:authorize="isAuthenticated()">
+        <h1 th:inline="text">Hola <span th:remove="tag" sec:authentication="name"></span>!</h1>
+        <h2>Seguridad implementada con Spring Security</h2>
+    </div>
+
+</body>
+</html>

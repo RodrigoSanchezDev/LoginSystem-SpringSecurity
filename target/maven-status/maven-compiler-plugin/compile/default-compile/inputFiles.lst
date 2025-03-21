@@ -1,0 +1,8 @@
+/Users/rodrigosanchezcornejo/Desktop/seguridadcalidad/src/main/java/com/duoc/seguridadcalidad/SeguridadcalidadApplication.java
+/Users/rodrigosanchezcornejo/Desktop/seguridadcalidad/src/main/java/com/duoc/seguridadcalidad/config/WebSecurityConfig.java
+/Users/rodrigosanchezcornejo/Desktop/seguridadcalidad/src/main/java/com/duoc/seguridadcalidad/controller/AdminController.java
+/Users/rodrigosanchezcornejo/Desktop/seguridadcalidad/src/main/java/com/duoc/seguridadcalidad/controller/HomeController.java
+/Users/rodrigosanchezcornejo/Desktop/seguridadcalidad/src/main/java/com/duoc/seguridadcalidad/controller/UserController.java
+/Users/rodrigosanchezcornejo/Desktop/seguridadcalidad/src/main/java/com/duoc/seguridadcalidad/model/User.java
+/Users/rodrigosanchezcornejo/Desktop/seguridadcalidad/src/main/java/com/duoc/seguridadcalidad/repository/UserRepository.java
+/Users/rodrigosanchezcornejo/Desktop/seguridadcalidad/src/main/java/com/duoc/seguridadcalidad/service/UserService.java
